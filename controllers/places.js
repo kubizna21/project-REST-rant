@@ -7,12 +7,9 @@ router.get('/new', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    req.body.pic = req.body.pic || '/images/default_food.jpg'
-    req.body.city = req.body.city || 'Anytown'
-    req.body.state = req.body.state || 'USA'
-
-    places.push(req.body)
-    res.redirect('/places')
+    console.log(req.body)
+    res.send('POST /places')
+    
 })
 
 
